@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Contact hey-HUNGRY{% endblock title %}
+{% block body %}
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+    <div style="background-color: #180; color: white; padding: 15px 0; text-align: center;">
+        <h1 style="margin: 0;">Contact Us</h1>
+    </div>
+
+    <div style="max-width: 600px; margin: 30px auto; padding: 20px; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center;">Get in Touch</h2>
+        <form method="post" action="/">
+            {% csrf_token %}
+            <label for="name" style="display: block; margin-bottom: 10px;">Name</label>
+            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <label for="email" style="display: block; margin-bottom: 10px;">Email</label>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <label for="message" style="display: block; margin-bottom: 10px;">Message</label>
+            <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+            
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #225; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+        </form>
+    </div>
+
+
+</body>
+  {% endblock body %}
